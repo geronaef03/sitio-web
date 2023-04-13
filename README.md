@@ -1,2 +1,2 @@
 # sitio-web
-Sitio web inicial para probar git y github
+Sitio Web inicial para probar git y github
