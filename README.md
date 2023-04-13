@@ -4,6 +4,6 @@
 
 Parrafo
 
-1. cosa 1 
-2. cosa 2
-3. cosa 3 
+1. Nombre: Geronimo
+2. Apellido: Naef
+3. Edad: 19 años
