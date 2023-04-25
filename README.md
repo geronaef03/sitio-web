@@ -2,7 +2,7 @@
 ## Sitio Web inicial para probar git y github
 
 
-Parrafo
+Parrafo.
 
 1. Nombre: Geronimo
 2. Apellido: Naef
