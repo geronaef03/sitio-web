@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Formularios</h1>
-    
-    <form name="formulario-Productos" method="get" action="">
-        <label for="firstname">Primer nombre</label>
-        <input type="text" name="firstname" placeholder="Escriba su nombre por favor">
-        <label for="firstname">Contraseña</label>
-        <input type="password" name="password">
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        
+        <form name="formulario-Productos" method="post" action="" enctype="multipart/form-data">
+            <input type="hidden" name="dni" value="11222333">
+
+            <label for="firstname">Primer nombre</label>
+            <input type="text" name="firstname" placeholder="Escriba su nombre por favor" value="Geronimo">
+            <br>    
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+            <br>    
+            <label for="tyc">Esta de acuerdo con los terminos y condiciones?</label>
+            <input type="checkbox" name="tyc" value="terminos y condiciones">
+            <br>    
+            <label for="gender">Genero:</label>
+            <br>
+
+            <label>Masculino</label>
+            <input name="gender" type="radio" value="M">
+            <label>Femenino</label>
+            <input name="gender" type="radio" value="F">
+            <label>No binario</label>
+            <input name="gender" type="radio" value="NB">
+            <label>Otros</label>
+            <input name="gender" type="radio" value="O">
+            <br>
+
+            <label for="archivo"></label>
+            <input type="file" name="archivo" multiple>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
 </html>
