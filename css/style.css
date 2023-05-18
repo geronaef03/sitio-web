@@ -1,6 +1,107 @@
-h1 {
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos de encabezado */
+h1, h2, h3 {
     color: blue;
 }
-h2 {
-    color: blue;
+
+/* Estilos de secciones */
+#ofertas div, #productos div {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+#ofertas span {
+    display: block;
+}
+
+#ofertas span b {
+    font-size: 20px;
+}
+
+#productos img {
+    width: 200px;
+    height: auto;
+}
+
+#productos h3 {
+    margin-top: 10px;
+}
+
+/* Estilos de formulario */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset div h3 {
+    margin-right: 10px;
+}
+
+fieldset div p {
+    margin-bottom: 0;
+}
+
+/* Estilos de footer */
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    display: block;
+}
+
+/* Estilos de imágenes de redes sociales */
+footer img {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos del mapa */
+footer iframe {
+    margin-top: 10px;
+    border: none;
+    width: 50%;
+    height: 100px;
 }

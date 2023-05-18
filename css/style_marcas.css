@@ -1,0 +1,74 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos de imágenes de redes sociales */
+footer img {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos del mapa */
+footer iframe {
+    margin-top: 10px;
+    border: none;
+    width: 50%;
+    height: 100px;
+}
+
+/* Estilos específicos para la página de Marcas */
+section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+section div {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+#iconos_marcas {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+/* Estilos para el texto de derechos de autor */
+footer span {
+    display: block;
+}
