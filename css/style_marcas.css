@@ -1,5 +1,4 @@
 
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,14 +41,12 @@ footer {
     text-align: center;
 }
 
-/* Estilos de imágenes de redes sociales */
 footer img {
     margin: 5px;
     width: 30px;
     height: 30px;
 }
 
-/* Estilos del mapa */
 footer iframe {
     margin-top: 10px;
     border: none;
@@ -57,7 +54,6 @@ footer iframe {
     height: 100px;
 }
 
-/* Estilos específicos para la página de Marcas */
 section {
     text-align: center;
     margin-top: 20px;
@@ -78,7 +74,6 @@ section div {
     align-items: center;
 }
 
-/* Estilos para el texto de derechos de autor */
 footer span {
     display: block;
 }
