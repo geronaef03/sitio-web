@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: calc(100% - 20px - 20px);
+
+            height: 50px;
+            padding: 10px 20px 10px 20px;
+            background-color: rgb(51, 38, 38);
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+
+        }
+
+        footer {
+            background-color: rgb(51, 38, 38);
+            color: aliceblue;
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+        }
+
+        input {
+            height: 40px;
+        }
+
+        .logo {
+            height: 40px;
+            background-color: aliceblue;
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .separator {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        section {
+            border: 1px solid black;
+            background-color: bisque;
+            min-height: 50vh;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        #principal {
+            /* margin-top: calc(50px + 10px + 10px + 20px); */
+            margin-top: 90px;
+            background-image: url('https://images.unsplash.com/photo-1600252278397-5fe47c86d3aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .card {
+            flex-basis: calc(40% - 2px);
+            border: 1px solid black;
+            margin: 20px auto;
+            background-color: rgb(125, 62, 62);
+            opacity: 0.8;
+        }
+
+        .card img {
+          width: 100%;  
+        }
+
+        .card p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #secundaria {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .col-30 {
+            flex-basis: 30%;
+            border-right: 4px dashed black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .col-70 {
+
+            background-image: url('https://images.unsplash.com/photo-1590787996529-a542c86ca267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            flex-basis: 70%;
+
+            /* display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+            align-content: end; */
+            position: relative;
+        }
+
+        .col-70 h2 {
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../img/facebook.svg" alt="Logo">
+        <input type="text" placeholder="Que desea buscar?">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#"> Seccion 1 </a>
+                    <span class="separator"> | </span>
+                </li>
+                <li>
+                    <a href="#"> Seccion 2 </a>
+                    <span class="separator"> | </span>
+                </li>
+                <li>
+                    <a href="#"> Seccion 3 </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="principal">
+        <h1>
+            Titulo Principal
+        </h1>
+        <div class="container">
+            
+            <div class="card">
+                <img src="../img/toyota.png">
+                <p> Texto de la Foto </p>
+            </div>
+
+            <div class="card">
+                <img src="../img/toyota.png">
+                <p> Texto de la Foto </p>
+            </div>
+
+            <div class="card">
+                <img src="../img/toyota.png">
+                <p> Texto de la Foto </p>
+            </div>
+
+            <div class="card">
+                <img src="../img/toyota.png">
+                <p> Texto de la Foto </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="secundaria">
+        <div class="col-30">
+            <h2> Titulo COL 30 </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga, magni eius porro laborum corrupti officia aliquam earum qui. Excepturi suscipit atque beatae esse possimus fugit iure deleniti reprehenderit rerum.
+            </p>
+        </div>
+
+        <div class="col-70">
+            <h2> Tituto COL 70 </h2>
+        </div>
+    </section>
+
+    <footer>
+        <span> By Edu @copyright 2023 </span>
+    </footer>
+</body>
+</html>
