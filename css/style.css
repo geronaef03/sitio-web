@@ -7,6 +7,9 @@ body {
 header {
     background-color: #f2f2f2;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 a {
@@ -16,6 +19,7 @@ a {
 
 #usuario {
     float: right;
+    order: 2;
 }
 
 ul {
@@ -25,6 +29,7 @@ ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-weight: bold;
 }
 
 section {
@@ -50,7 +55,7 @@ h3 {
 }
 
 
-#ofertas div, #productos div {
+#ofertas div {
     text-align: center;
     margin: 10px;
 }
@@ -61,6 +66,12 @@ h3 {
 
 #ofertas span b {
     font-size: 20px;
+}
+
+.items div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #productos img {
