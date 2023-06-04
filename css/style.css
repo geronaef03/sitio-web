@@ -12,6 +12,10 @@ header {
     align-items: center;
 }
 
+.navegacion{
+    padding-right: 15px;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -33,6 +37,7 @@ ul {
 }
 
 section {
+    margin: 20px;
     padding: 20px;
 }
 
@@ -48,12 +53,18 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 h3 {
     color: blue;
+    font-weight: bold;
 }
 
+#ofertas {
+    background-color:aquamarine;
+    background-image: url(../img/ofertas.gif);
+}
 
 #ofertas div {
     text-align: center;
@@ -62,46 +73,59 @@ h3 {
 
 #ofertas span {
     display: block;
-}
-
-#ofertas span b {
     font-size: 20px;
+    font-weight: bold;
 }
 
-.items div {
+.pcs {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#productos {
+    background-color:cyan;
 }
 
 #productos img {
     width: 200px;
-    height: auto;
+    height: 200px;
 }
 
 #productos h3 {
     margin-top: 10px;
 }
 
-
-
-fieldset {
-    border: none;
-    padding: 0;
+#servicios {
+    background-color: aquamarine;
 }
 
-fieldset div {
+.reparacion {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
-fieldset div h3 {
-    margin-right: 10px;
+.armado {
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
-fieldset div p {
-    margin-bottom: 0;
+.reparacion img {
+    margin: 2px;
+}
+
+.armado img {
+    margin: 5px;
 }
 
 footer div {
