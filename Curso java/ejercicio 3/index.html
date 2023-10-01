@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal con Input Numérico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="openModalButton">Abrir Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalButton" class="close">&times;</span>
+            <h2>Ingresa un número</h2>
+            <input type="number" id="numberInput" placeholder="Escribe un número">
+            <button id="confirmButton">Confirmar</button>
+        </div>
+    </div>
+
+    <p>El número ingresado es: <span id="result"></span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
