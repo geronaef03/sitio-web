@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Estudiantes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+    <style>
+        .verde {
+            color: green;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Lista de Estudiantes</h1>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Promedio</th>
-        </tr>
-        <tr>
-            <td>Juan</td>
-            <td class="promedio-10">10.0</td>
-        </tr>
-        <tr>
-            <td>María</td>
-            <td>8.5</td>
-        </tr>
-        <tr>
-            <td>Alejandro</td>
-            <td>9.5</td>
-        </tr>
-        <tr>
-            <td>Pedro</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>Camila</td>
-            <td>6.5</td>
-        </tr>
-        <tr>
-            <td>Noemi</td>
-            <td class="promedio-10">10</td>
-        </tr>
-        <tr>
-            <td>Hector</td>
-            <td>7.5</td>
-        </tr>
-        <tr>
-            <td>Sofía</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>Mariana</td>
-            <td>7</td>
-        </tr>
-        <tr>
-            <td>Carlos</td>
-            <td class="promedio-10">10</td>
-        </tr>
-        
-    </table>
-    <script src="script.js"></script>
+
+    <div id="promedio"></div>
+    <div class="container"></div>
+    <button id="calcular"> Calcular </button>
+    <button id="reset"> Reset </button>
+
+    <script>
+        /*
+            Crea una página web que muestre una lista de estudiantes y sus promedios. La página debe realizar las siguientes tareas:
+
+            1. Mostrar la lista de 10 estudiantes.
+            2. Resaltar en color verde a los estudiantes que tengan un promedio de 10.
+            3. Calcular el promedio general de la clase y mostrarlo en algun lugar de la pagina.
+            4. Mostrar el contenido cuando presinado el boton calcular
+        */
+
+        const claseJSON = '{"estudiantes":[{"nombre":"Juan","promedio":7},{"nombre":"Pedro","promedio":9},{"nombre":"Maria","promedio":8},{"nombre":"Carlos","promedio":10},{"nombre":"Ana","promedio":7},{"nombre":"Pablo","promedio":10},{"nombre":"Matias","promedio":6},{"nombre":"Ezequiel","promedio":8},{"nombre":"Florencia","promedio":9},{"nombre":"Roxana","promedio":7}]}'
+        const clase = JSON.parse(claseJSON)
+        let container = document.querySelector('.container')
+        let promedioDiv = document.querySelector('#promedio')
+        let botonCalcular = document.querySelector('#calcular')
+        let botonReset = document.querySelector('#reset')
+
+        botonCalcular.addEventListener('click', (event) => {
+            event.target.disabled = true
+
+            let acumulador = 0
+            let contador = 0
+            let promedioGeneral
+            let estudianteHTMLString
+
+            clase.estudiantes.forEach(estudiante => {
+
+                if (estudiante.promedio == 10) {
+                    estudianteHTMLString = `<p class="verde"> ${estudiante.nombre}, y su promedio es ${estudiante.promedio} </p>`
+                } else {
+                    estudianteHTMLString = `<p> ${estudiante.nombre}, y su promedio es ${estudiante.promedio} </p>`
+                }
+
+                container.insertAdjacentHTML("afterbegin", estudianteHTMLString)
+
+                contador = contador + 1
+                acumulador = acumulador + estudiante.promedio 
+            });
+
+            promedioGeneral = acumulador / contador
+            promedioDiv.innerHTML = `<p> <b>El promedio general es: ${promedioGeneral}<b/> </p>`
+
+        })
+
+        botonReset.addEventListener('click', (event) => {
+            container.innerHTML = ""
+            promedioDiv.innerHTML = ""
+            botonCalcular.disabled = false
+        })
+    </script>
 </body>
+
 </html>
