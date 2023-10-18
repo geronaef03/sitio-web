@@ -1,17 +1,7 @@
 const modal = document.getElementById("miModal");
 const botonCerrar = document.querySelector(".cerrar-modal");
 
-const productos = []; productos.forEach((producto, index) => {
-  const productoElement = document.querySelectorAll(".producto")[index];
-  productoElement.addEventListener("click", () => {
-    const imagenProducto = document.getElementById("imagen-producto");
-    const descripcionProducto = document.getElementById("descripcion-producto");
-    imagenProducto.src = producto.image_field;
-    descripcionProducto.textContent = producto.description;
-
-    modal.style.display = "block";
-  });
-});
+const productos = []; 
 
 botonCerrar.addEventListener("click", () => {
   modal.style.display = "none";
@@ -36,22 +26,19 @@ function mostrarProductos(productos) {
   const contenedor = document.getElementById("productos-container");
   contenedor.innerHTML = '';
 
-  // Encuentra el producto más caro
-  const productoMasCaro = productos.reduce((max, producto) =>
-    producto.price > max.price ? producto : max
-  );
+  const productoMasCaro = productos.reduce((max, producto) => producto.price > max.price ? producto : max);
 
   productos.forEach((producto) => {
     const productoElement = document.createElement("div");
     productoElement.classList.add("producto");
 
-    // Aplica un borde de color a los productos más caros
     if (producto.price === productoMasCaro.price) {
       productoElement.classList.add("producto-destacado");
     }
 
     productoElement.innerHTML = `
       <h3>${producto.name}</h3>
+      <img src="${producto.image_field}" alt="Imagen del ${producto.name}" class="w-100">
       <p>Precio: ${producto.price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
     `;
 
@@ -70,14 +57,4 @@ function mostrarProductos(productos) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  cargarProductos();
-});
-
 cargarProductos();
-
-function cargarDatos() {
-  cargarDatos();
-}
-
-setInterval(cargarDatos, 300000);
